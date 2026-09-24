@@ -1,7 +1,5 @@
 # Edge AI Virtual Lab — agreed experiment sequence
 
-Each experiment is built and reviewed in order. The current browser site is a prototype; an experiment is marked **Frozen v1** only after its complete interactive lesson and review.
-
 ## A. Sensing and foundations
 
 1. Raspberry Pi 5 DHT11/DHT22 sensing — GPIO wiring, polling, errors, live trace.
@@ -62,12 +60,5 @@ Each experiment is built and reviewed in order. The current browser site is a pr
 3. Runnable code, setup instructions, sample data, and expected output.
 4. Verified calculations and clear labels for simulation versus measured results.
 5. Student task, assessment questions, and reproducible result sheet.
-6. **Optional physical-board path:** a numbered parts list, OS/driver setup, wiring, dependency installation, model/data acquisition, commands to run, expected output, troubleshooting, and a benchmark sheet. Students complete it when they have the required hardware.
-
-Only steps 1–5 are required to freeze a browser lesson. Hardware claims remain unverified until the optional path is actually run on the specified board.
-
-## Experiment 22 hardware setup outline
-
-Use Raspberry Pi 5 with a 64-bit Raspberry Pi OS image and either a Pi camera or USB webcam. Install OpenVINO in a Python virtual environment and verify that `CPU` appears in `Core().available_devices`. Use the official Open Model Zoo `face-detection-retail-0004` model (FP32 XML and BIN), whose input is BGR `1×3×300×300`. Capture a frame, preprocess it, run CPU inference, decode confidence and box coordinates, then report accuracy examples, inference latency, end-to-end FPS, and memory. The complete tested commands and script will ship with this experiment when it is built.
 
 Sources: [OpenVINO installation](https://docs.openvino.ai/2025/get-started/install-openvino/install-openvino-pip.html), [Open Model Zoo model](https://github.com/openvinotoolkit/open_model_zoo/tree/master/models/intel/face-detection-retail-0004), [Raspberry Pi camera software](https://www.raspberrypi.com/documentation/computers/camera_software.html).
